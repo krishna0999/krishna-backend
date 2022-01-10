@@ -7,6 +7,7 @@ import dotenv from "dotenv";
 
 const app = express();
 dotenv.config();
+console.log("databse url >>>", process.env.CONNECTION_URL);
 
 app.use(cors());
 app.use(bodyParser.json({ limit: "30mb", extended: "true" }));
