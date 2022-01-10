@@ -23,6 +23,9 @@ mongoose
   .then(() => console.log("Connected to database"))
   .catch((err) => console.log(err));
 
+app.get("/", (req, res) => {
+  res.send("Welcome to to-riti api");
+});
 app.use("/posts", postRoutes);
 
 app.listen(PORT, () => console.log(`Listening at localhost:${PORT}`));
