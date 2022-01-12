@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import bodyParser from "body-parser";
 import postRoutes from "./routes/posts.js";
+import authRoutes from "./routes/auth.js";
 import dotenv from "dotenv";
 
 const app = express();
@@ -28,6 +29,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to to-riti api");
 });
 app.use("/posts", postRoutes);
+app.use("/auth", authRoutes);
 
 app.listen(PORT, () => console.log(`Listening at localhost:${PORT}`));
 
